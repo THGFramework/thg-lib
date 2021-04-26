@@ -5,7 +5,8 @@ import importlib
 
 
 __all__ = [
-    'add'
+    'add',
+    'modstring'
 ]
 
 for module in __all__:

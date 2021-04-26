@@ -43,13 +43,7 @@ if not os.path.exists(PythonH):
     print("# apt-get install python-dev", file=sys.stderr)
     sys.exit(-1)
 
-# Convert README.md to reStructuredText for PyPI
-long_description = ''
-try:
-    long_description = subprocess.check_output(['pandoc', 'README.md', '--to=rst'], universal_newlines=True)
-except Exception as e:
-    print("Failed to convert README.md through pandoc, proceeding anyway", file=sys.stderr)
-    traceback.print_exc()
+
 
 setup(
     name='thglib',
@@ -57,7 +51,6 @@ setup(
     packages=find_packages(),
     version='0.0.1dev',
     description="thglib exploit framework and exploit development library.",
-    long_description=long_description,
     author="Luiz Corrêa(darkcode0x00)",
     author_email="darkcode357@gmail.com",
     url='https://darkcode0x00.com/thg',
