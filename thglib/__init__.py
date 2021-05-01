@@ -2,11 +2,13 @@ from __future__ import absolute_import
 
 import importlib
 
+from thglib.version import __version__
 
+version = __version__
 
 __all__ = [
-    'add',
-    'modstring'
+    'teste'
+
 ]
 
 for module in __all__:
